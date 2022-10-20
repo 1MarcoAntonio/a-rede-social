@@ -6,12 +6,14 @@
 
 body {
     height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.295), rgba(255, 255, 255, 0.178));
     
 }
 
 .logo {
     width: 50px;
     margin: 20px;
+    border-radius: 20px;
     
 }
 
@@ -33,13 +35,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: crimson;
+    background-color:crimson; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, crimson, rgb(243, 115, 115));
+    border-radius: 10px 100px / 120px;
 }
 
 .div-head2 {
     display: flex;
     align-items: center;
     flex-direction:row;
+    transition: 2s;
+}
+
+.div-head2:hover {
+    scale: 1.5px;
+
 }
 
 .section {
@@ -57,15 +67,14 @@ body {
     background-color: white;
     border: 10px solid;
     padding: 10px;
-    border-image-source:linear-gradient(45deg ,red, blue);
-    border-image-slice: 70;
-    border-radius: 40px
-
+    border: double 4px transparent;
+    border-radius: 60px;
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #f00,#3020ff);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
   }
 
-.ronaldo {
-    color: aqua;
-}
+
 
 .div-photo-post {
   display: flex;
@@ -88,7 +97,6 @@ body {
     justify-content: center;
     align-items: center;
     margin-left: 3px;
-    background-color:rebeccapurple;
     width: 340px;
     margin-top: 5px;
     box-sizing: 2px;
@@ -96,10 +104,10 @@ body {
 }
 
 .content-post {
-  margin-left: 14px;
+  margin-left: 25px;
   width: 380px;
   height: 300px;
-  object-fit: cover;
+  object-fit:cover;
   align-self: center;
 }
 
@@ -115,79 +123,89 @@ body {
 }
 
 
-/* like button */
+ /* like and comments button style */
 .button-like {
-    border: 2px solid #8a8a8a;
-    background-color: transparent;
-    text-decoration: none;
-    padding: 1rem;
-    position: relative;
-    vertical-align: middle;
-    text-align: center;
-    display: inline-block;
-    border-radius: 3rem;
-    color: #8a8a8a;
-    transition: all ease 0.4s;
-    margin-top: 10px;
-  }
+  border: 2px solid #8a8a8a;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 1rem;
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+  border-radius: 3rem;
+  color: #8a8a8a;
+  transition: all ease 0.4s;
+  margin-top: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
   
-  .button-like span {
+.button-like span {
     margin-left: 0.5rem;
-  }
+}
   
-  .button-like .fa,
-  .button-like span {
+.button-like .fa,
+.button-like span {
     transition: all ease 0.4s;
-  }
+}
   
-  .button-like:focus {
+.button-like:focus {
     background-color: transparent;
-  }
+}
   
-  .button-like:focus .fa,
-  .button-like:focus span {
+.button-like:focus .fa,
+.button-like:focus span {
     color: #8a8a8a;
-  }
+}
   
-  .button-like:hover {
-    border-color: #cc4b37;
-    background-color: transparent;
-  }
+.button-like:hover {
+    border-color: crimson;
+    background-color: rgba(220, 20, 60, 0.178);
+}
   
-  .button-like:hover .fa,
-  .button-like:hover span {
+.button-like:hover .fa,
+.button-like:hover span {
     color: #cc4b37;
-  }
+}
   
-  .liked {
+.liked {
     background-color: #cc4b37;
     border-color: #cc4b37;
-  }
+}
   
-  .liked .fa,
-  .liked span {
+.liked .fa,
+.liked span {
     color: #fefefe;
-  }
+}
   
-  .liked:focus {
+.liked:focus {
     background-color: #cc4b37;
-  }
+}
   
-  .liked:focus .fa,
-  .liked:focus span {
+.liked:focus .fa,
+.liked:focus span {
     color: #fefefe;
-  }
+}
   
-  .liked:hover {
+.liked:hover {
     background-color: #cc4b37;
     border-color: #cc4b37;
-  }
-  
-  .liked:hover .fa,
-  .liked:hover span {
-    color: #fefefe;
-  }
 
+}
+  
+.liked:hover .fa,
+.liked:hover span {
+    color: #fefefe;
+}
+
+.button-like:active span{
+  
+  margin-left: 1px;
+  box-shadow: none;
+}
+  
+/* ------------------------------------ */
 
   
   
