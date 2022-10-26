@@ -9,15 +9,21 @@ fetch('https://dummyjson.com/posts')
 .then(res => res.json())
 .then(({posts})=>{
   posts.forEach(posts => {
-    const textoPost = document.createElement("p").className = "texto-post";
-    const imgPost = document.createElement("img").src = "photos/149071.png".className = "user-photo1"
-    const pPost = document.createElement("p")
+    const textoPost = document.createElement("p");
     const textoP = document.createTextNode("nome usuario")
-    
-    const post = document.createElement("div").className = "post"
-    textoPost = posts.title;
-    post.appendChild(textoPost)
-    main.appendChild(post)
+    textoPost.classList.add('user-name-post')
+    textoPost.appendChild(textoP)
+     const imgPost = document.createElement("img")
+    imgPost.classList.add("user-photo1")
+    imgPost.src = "photos/149071.png"; 
+    const divPost = document.createElement("div")
+    const conteudoPost = document.createElement("p")
+    const postText = document.createTextNode(posts.title)
+    divPost.appendChild(imgPost)
+    divPost.appendChild(textoPost)
+    conteudoPost.appendChild(postText)
+    divPost.appendChild(conteudoPost)
+    main.appendChild(divPost)
   });
 })
 
