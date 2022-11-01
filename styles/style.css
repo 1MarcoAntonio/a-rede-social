@@ -57,13 +57,13 @@ body {
     background-color: aquamarine;
 }
 
-.post {
+.div-conteiner {
     margin-top: 20px;
     margin-left: 480px;
     display: flex;
     flex-direction: column;
     width: 400px;
-    height: 464px;
+    height: 600px;
     background-color: white;
     border: 10px solid;
     padding: 10px;
@@ -76,7 +76,7 @@ body {
 
 
 
-.div-photo-post {
+.div1 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -92,7 +92,7 @@ body {
   margin-right: 50px;
 }
 
-.div-post {
+.div2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,7 +111,7 @@ body {
   align-self: center;
 }
 
-.like-button {
+.div4 {
     align-self:baseline;
 }
 
