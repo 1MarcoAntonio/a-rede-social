@@ -7,7 +7,8 @@
 body {
     height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.295), rgba(255, 255, 255, 0.178));
-    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .logo {
@@ -81,7 +82,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   width: 210px;
-  max: width 100px;
+  max-width: 100px;
   align-items: center;
 }
 
@@ -104,9 +105,10 @@ body {
 }
 
 .content-post {
-  margin-left: 25px;
+  
+  text-align: center;
   width: 380px;
-  height: 300px;
+  height: 250px;
   object-fit:cover;
   align-self: center;
 }
@@ -141,10 +143,7 @@ body {
   cursor: pointer;
 }
   
-.button-like span {
-    margin-left: 0.5rem;
-}
-  
+
 .button-like .fa,
 .button-like span {
     transition: all ease 0.4s;
@@ -201,10 +200,13 @@ body {
 
 .button-like:active span{
   
-  margin-left: 1px;
+  
   box-shadow: none;
 }
-  
+ .button {
+    display: flex;
+    width: 100%;
+ } 
 /* ------------------------------------ */
 
   
