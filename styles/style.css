@@ -64,7 +64,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 400px;
-    height: 600px;
+    
     background-color: white;
     border: 10px solid;
     padding: 10px;

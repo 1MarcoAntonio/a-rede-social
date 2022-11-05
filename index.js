@@ -13,21 +13,24 @@ async function userHeader(){
   })
  }
 
-async function usersAndImagens(conteiner, userPostName) {
+async function usersAndImagens(imgUser, nameUser) {
   await fetch('https://dummyjson.com/users')
   .then(res => res.json())
   .then(({users})=>{
     let random = Math.floor(Math.random() * users.length); 
     const post = users[random];
       
-    conteiner.classList.add("user-photo1")
-    conteiner.src = post.image;
+    imgUser.classList.add("user-photo1")
+    imgUser.src = post.image;
     
-    userPostName.textContent = post.firstName
-    userPostName.classList.add('user-name-post')
+    nameUser.textContent = post.firstName
+    nameUser.classList.add('user-name-post')
+
+    imgUser.addEventListener("click", ()=> sessionStorage.setItem("valor", post.id))
         
   
 })}
+
 
 
   async function fotoTitlePost () {
@@ -39,41 +42,54 @@ async function usersAndImagens(conteiner, userPostName) {
       const button = document.createElement("button")
       const span = document.createElement("span")
       const divConteiner = document.createElement("div")
+      const ancor = document.createElement("a")
       const imgUser = document.createElement('img')
       const nameUser = document.createElement('p')
-      divConteiner.classList.add("div-conteiner")
-      button.classList.add("button-like")
-      span.textContent = "comments"
-      button.appendChild(span)
-      usersAndImagens(imgUser, nameUser)
-
-      button.addEventListener("click", ()=>{
-        
-      })
-
       const title = document.createElement("p");
       title.textContent = post.title
       const postBody = document.createElement("p");
       postBody.textContent = post.body
       const imgPost = document.createElement("img")
-      imgPost.src = "photos/cyberpunk_mercenarios.webp"
+      
+      divConteiner.classList.add("div-conteiner")
+      button.classList.add("button-like")
+      span.textContent = "comments"
+      ancor.href = "user.html"
+      button.appendChild(span)
+      usersAndImagens(imgUser, nameUser)
+
+      button.addEventListener("click", ()=>{
+        comentarios(divConteiner)
+      })
+
+      
+      dogPost(imgPost)
+      
       imgPost.classList.add("content-post")
-      divConteiner.appendChild(imgUser)
-      divConteiner.appendChild(nameUser)
+      ancor.appendChild(imgUser)
+      ancor.appendChild(nameUser)
+      divConteiner.appendChild(ancor)
       divConteiner.appendChild(imgPost)
       divConteiner.appendChild(title)
       divConteiner.appendChild(postBody)
       divConteiner.appendChild(button)
-      comentarios(divConteiner)
-      
       main.appendChild(divConteiner)
-    
   })
   }
 
 
 
 
+  async function dogPost(imgPost){  
+    await fetch("https://dog.ceo/api/breeds/image/random")
+    .then( res=> res.json())
+    .then( res => {
+      imgPost.src = res.message
+
+    })
+  }
+  
+    
 
 
 
