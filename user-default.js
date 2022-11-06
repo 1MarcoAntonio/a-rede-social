@@ -1,6 +1,5 @@
 window.addEventListener('DOMContentLoaded', e =>{
     e.preventDefault();
-const user = sessionStorage.getItem("valor");
 const main = document.querySelector("#main");
 const pNome = document.querySelector("#nome");
 const imgUser = document.querySelector("#user");
@@ -16,7 +15,7 @@ const phone = document.querySelector("#phone");
 
 
 async function perfil(){
-    await fetch(`https://dummyjson.com/users/${user}`)
+    await fetch(`https://dummyjson.com/users/1`)
     .then(res => res.json())
     .then(res => {
         pNome.textContent = res.firstName;
