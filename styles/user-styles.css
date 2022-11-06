@@ -2,11 +2,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Dank Mono", ui-monospace, monospace;
 }
 
 body {
     height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.295), rgba(255, 255, 255, 0.178));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .logo {
@@ -19,15 +22,26 @@ body {
 .div-head1 {
     display: flex;
     align-items: center;
+    flex-direction:row;
 }
 
 .user-name{
+    margin-top: 50px;
     margin-right: 30px;
+    font-size: 250%;
+    color:lightblue;
+    
+    
 }
 
 .user-photo {
-    width: 55px;
+    margin-left: 85px;
+    margin-top: 30px;
+    width: 150px;
     margin-right: 10px;
+    background-color: black;
+    border-radius: 75px;
+    
 }
 
 .header {
@@ -41,58 +55,18 @@ body {
 
 .div-head2 {
     display: flex;
-    align-items: center;
-    flex-direction:row;
+    height: 500px;
+    flex-direction: row;
+    align-items:flex-start;
+    width: 1200px;
+    background-image: linear-gradient(to bottom right, crimson, rgba(241, 203, 203, 0.678));
+    border-radius: 600px; 
+    
 }
 
-.section {
-    width: 20%;
-    background-color: aquamarine;
-}
 
-.post {
-    margin-top: 20px;
-    margin-left: 480px;
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    height: 464px;
-    background-color: white;
-    border: 10px solid;
-    padding: 10px;
-    border-image-source:linear-gradient(45deg ,red, blue);
-    border-image-slice: 70;
-    border-radius: 40px
 
-  }
 
-.div-photo-post {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 210px;
-  max: width 100px;
-  align-items: center;
-}
-
-.user-name-post {
- 
-  color: red;
-  display: inline-block;
-  margin-right: 50px;
-}
-
-.div-post {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 3px;
-    background-color:rebeccapurple;
-    width: 340px;
-    margin-top: 5px;
-    box-sizing: 2px;
-    justify-content: center;
-}
 
 .content-post {
   margin-left: 14px;
@@ -102,13 +76,74 @@ body {
   align-self: center;
 }
 
-.like-button {
-    align-self:baseline;
+.container {
+    display: flex;          
+    flex-direction:row;  
+    justify-content: center; 
+    justify-content: space-evenly;
+    align-items: center;     
+    height: 600px;
+    
 }
 
-.user-photo1 {
-  width: 55px;
-  margin-right: 10px;
-  display: flex;
-  justify-content: flex-start;
+.container-user {
+    font-size: 250%;
+    white-space: nowrap;
+    display: inline-flex;
+    position: relative;
+    
+}
+
+.lista {
+    margin-left: 20px;
+    width: 200px;
+    margin-top: 30px;
+}
+
+.lista-div{
+    display: flex;
+    width: 500px;
+    height: 500px;
+    align-self:center;
+    margin-right: 200px;
+    justify-content: center;
+    flex-direction: column;
+    
+    
+}
+
+li p {
+    white-space: nowrap;
+}
+
+.a-logo {
+    display:flex;
+    align-items: center;
+}
+
+.a-logo:link {
+    text-decoration: none;
+}
+
+.a-logo:visited {
+    text-decoration: none;
+}
+
+.a-logo:hover {
+    text-decoration: underline;
+}
+
+.a-logo:active {
+    text-decoration: underline;
+}
+
+.info {
+    align-self:flex-start;
+    display: inline-block;
+    font-size: 300%;
+    width: 600px;
+    margin-left: 10px;
+    color:lightblue ;
+    
+    
 }

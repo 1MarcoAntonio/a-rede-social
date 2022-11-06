@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Dank Mono", ui-monospace, monospace;
 }
 
 body {
@@ -10,7 +11,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
+/* header styles ------------------------------------------*/
 .logo {
     width: 50px;
     margin: 20px;
@@ -23,8 +24,12 @@ body {
     align-items: center;
 }
 
+
 .user-name{
     margin-right: 30px;
+    font-size: 150%;
+    color:lightblue;
+    text-align: center;
 }
 
 .user-photo {
@@ -37,7 +42,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color:crimson; /* For browsers that do not support gradients */
-    background-image: linear-gradient(to bottom right, crimson, rgb(243, 115, 115));
+    background-image: linear-gradient(to bottom right, crimson, rgba(241, 203, 203, 0.678));
     border-radius: 10px 100px / 120px;
 }
 
@@ -52,11 +57,8 @@ body {
     scale: 1.5px;
 
 }
+/* ---------------------------------- */
 
-.section {
-    width: 20%;
-    background-color: aquamarine;
-}
 
 .div-conteiner {
     margin-top: 20px;
@@ -77,14 +79,7 @@ body {
 
 
 
-.div1 {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 210px;
-  max-width: 100px;
-  align-items: center;
-}
+
 
 .user-name-post {
  
@@ -93,54 +88,69 @@ body {
   margin-right: 50px;
 }
 
-.div2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 3px;
-    width: 340px;
-    margin-top: 5px;
-    box-sizing: 2px;
-    justify-content: center;
-}
 
 .content-post {
   
   text-align: center;
   width: 380px;
   height: 250px;
-  object-fit:cover;
+  object-fit:fill;
   align-self: center;
+  border-radius: 20px;
 }
 
-.div4 {
-    align-self:baseline;
-}
 
 .user-photo1 {
   width: 55px;
   margin-right: 10px;
   display: flex;
   justify-content: flex-start;
+  border-radius: 50%;
 }
 
+.comment {
+    margin-left: 30px;
+}
+
+.a-logo {
+    display:flex;
+    align-items: center;
+
+}
+
+.a-logo:link {
+    text-decoration: none;
+}
+
+.a-logo:visited {
+    text-decoration: none;
+}
+
+.a-logo:hover {
+    text-decoration: underline;
+}
+
+.a-logo:active {
+    text-decoration: underline;
+}
 
  /* like and comments button style */
 .button-like {
-  border: 2px solid #8a8a8a;
-  background-color: transparent;
-  text-decoration: none;
-  padding: 1rem;
-  position: relative;
-  vertical-align: middle;
-  text-align: center;
-  display: inline-block;
-  border-radius: 3rem;
-  color: #8a8a8a;
-  transition: all ease 0.4s;
-  margin-top: 10px;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
+    border: 2px solid #8a8a8a;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 1rem;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+    border-radius: 3rem;
+    color: #8a8a8a;
+    transition: all ease 0.4s;
+    margin-top: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    
 }
   
 
@@ -199,14 +209,23 @@ body {
 }
 
 .button-like:active span{
-  
-  
   box-shadow: none;
+  color: white;
 }
+ .button-like:active{
+    display: flex;
+    background-color: crimson;
+    
+ } 
+
  .button {
     display: flex;
     width: 100%;
  } 
+
+ .imgcomments {
+    width: 30px;
+ }
 /* ------------------------------------ */
 
   

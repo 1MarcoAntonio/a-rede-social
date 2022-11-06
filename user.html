@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,14 +10,36 @@
 <body>
   <header class="header">
     <div class="div-head1">
+        <a class="a-logo" href="index.html">
         <img class="logo" src="photos/B65naJZx_400x400.jpg" alt="logo do app">
         <h2 class="nome-app" >biomedia</h2>
+        </a>
     </div>
-    <a  href="#" class="div-head2">
-        <p class="user-name" >nome usuario</p>
-        <img class="user-photo" src="photos/149071.png" alt="logo usuario">
-    </a>
-</header> 
+    
+    </header>
+
+<main class="container">
+    
+    <div class="div-head2">  
+        <img id="user" class="user-photo" src="photos/149071.png" alt="logo usuario">
+        <p id="nome" class="user-name" >nome usuario</p>
+        <div class="lista-div">
+            <p class="info">informaçoes do usuario</p>
+            <ul class="lista">
+                <li class="container-user">Idade: <p id="age">Vazio</p></li>
+                <li class="container-user">Gênero: <p id="gender"> Vazio</p></li>
+                <li class="container-user">Nascimento: <p id="birth"> Vazio</p></li>
+                <li class="container-user">Endereço: <p id="address"> Vazio</p></li>
+                <li class="container-user">Cidade: <p id="city"> Vazio</p></li>
+                <li class="container-user">Email: <p id="email"> Vazio</p></li>
+                <li class="container-user">Telefone: <p id="phone"> Vazio</p></li>
+            </ul>
+        </div>
+    </div>
+    
+    
+</main>
+
 <script src="user.js"></script>   
 </body>
 </html>
